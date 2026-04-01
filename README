@@ -1,480 +1,266 @@
-📘 Mathematics for Information Security: From Group Theory to Post-Quantum Cryptography
+<div style="font-size:16px; line-height:1.7;">
 
-Author: Haijian Shao
+# 📘 Mathematics for Information Security: From Group Theory to Post-Quantum Cryptography
+**Author: Haijian Shao**
 
+---
 
-
-📖 Overview
-
+## 📖 Overview
 This repository provides a mathematical lecture note system for information security and cryptography, designed for undergraduate/graduate students, researchers, and engineers. It systematically covers the core mathematical foundations of modern cryptography, bridging rigorous theory and engineering practice. Unlike traditional textbooks that treat mathematics as abstract formalism, this project organizes mathematical structures around real cryptographic problems and implementations.
 
-📌 Status: Actively under development. The full plan includes 10 chapters, with several already released and more being iteratively added.
+📌 **Status**: Actively under development. The full plan includes 10 chapters, with several already released and more being iteratively added.
 
-🎯 Objectives
-
+## 🎯 Objectives
 - Build a derivable and applicable mathematical toolkit for cryptography
-
 - Explain why cryptographic algorithms work, not just how
-
 - Connect algebraic structures → security assumptions → real systems
-
 - Support research, engineering, and post-quantum cryptography learning
 
+---
+
+## 📚 Table of Contents
+
+### Part I: Discrete Algebraic Structures (Foundations of Classical Cryptography)
+1. **Number Theory**
+   - Congruences and modular arithmetic
+   - GCD / LCM (Euclidean & Extended Euclidean Algorithm)
+   - Bézout’s theorem (modular inverse foundation)
+   - Prime generation and fundamental theorem of arithmetic
+
+2. **Group Theory**
+   - Group axioms and cryptographic constraints
+   - Abelian vs non-Abelian groups
+   - Subgroups, normal subgroups, quotient groups
+   - Homomorphisms and isomorphisms
+
+3. **Ring Theory and Ideals**
+   - Ring structures and algebraic properties
+   - Residue class rings ($\mathbb{Z}_m$)
+   - Ideals, principal ideals, maximal ideals
+   - Quotient rings and finite field construction
+
+4. **Primitive Roots & Discrete Logarithms**
+   - Cyclic group structures
+   - Generator selection and safe primes
+   - Discrete Logarithm Problem (DLP)
+   - Practical tools (GMP, OpenSSL)
 
 ---
-📚 Table of Contents
 
-Part I: Discrete Algebraic Structures (Foundations of Classical Cryptography)
+### Part II: Finite Fields and Constructions (Engineering Foundations)
+5. **Finite Fields**
+   - Prime fields ($\mathbb{F}_p$) and extensions ($\mathbb{F}_{p^n}$)
+   - Irreducible polynomials
+   - Field arithmetic implementation
+   - Mapping ($\mathbb{Z}_2 \rightarrow \text{GF}(2^8)$)
 
-1. Number Theory
-
-- Congruences and modular arithmetic
-
-- GCD / LCM (Euclidean & Extended Euclidean Algorithm)
-
-- Bézout’s theorem (modular inverse foundation)
-
-- Prime generation and fundamental theorem of arithmetic
-
-2. Group Theory
-
-- Group axioms and cryptographic constraints
-
-- Abelian vs non-Abelian groups
-
-- Subgroups, normal subgroups, quotient groups
-
-- Homomorphisms and isomorphisms
-
-3. Ring Theory and Ideals
-
-- Ring structures and algebraic properties
-
-- Residue class rings ( $$\mathbb{Z}_m$$ )
-
-- Ideals, principal ideals, maximal ideals
-
-- Quotient rings and finite field construction
-
-4. Primitive Roots & Discrete Logarithms
-
-- Cyclic group structures
-
-- Generator selection and safe primes
-
-- Discrete Logarithm Problem (DLP)
-
-- Practical tools (GMP, OpenSSL)
-
+6. **Applications of Finite Fields**
+   - AES/SM4 S-box construction
+   - Polynomial multiplication optimization
+   - Error correction codes (CRC/ECC)
+   - Hardware/software optimization
 
 ---
-Part II: Finite Fields and Constructions (Engineering Foundations)
 
-5. Finite Fields
+### Part III: Elliptic Curve Cryptography (Efficient Public-Key Systems)
+7. **Algebra of Elliptic Curves**
+   - Group law (point addition & multiplication)
+   - Curves over finite fields
+   - ECDLP hardness and security
 
-- Prime fields ( $$\mathbb{F}_p$$ ) and extensions ( $$\mathbb{F}_{p^n}$$ )
-
-- Irreducible polynomials
-
-- Field arithmetic implementation
-
-- Mapping ( $$\mathbb{Z}_2 \rightarrow \text{GF}(2^8)$$ )
-
-6. Applications of Finite Fields
-
-- AES/SM4 S-box construction
-
-- Polynomial multiplication optimization
-
-- Error correction codes (CRC/ECC)
-
-- Hardware/software optimization
-
+8. **ECC / SM2 Engineering**
+   - SM2 parameter standards
+   - Coordinate optimization (affine/projective)
+   - Side-channel resistance
+   - ECC vs RSA comparison
 
 ---
-Part III: Elliptic Curve Cryptography (Efficient Public-Key Systems)
 
-7. Algebra of Elliptic Curves
+### Part IV: Quantum Threats & Post-Quantum Cryptography
+9. **Quantum Risks**
+   - Shor’s algorithm
+   - Impact on RSA/ECC
+   - Security boundary shifts
 
-- Group law (point addition & multiplication)
-
-- Curves over finite fields
-
-- ECDLP hardness and security
-
-8. ECC / SM2 Engineering
-
-- SM2 parameter standards
-
-- Coordinate optimization (affine/projective)
-
-- Side-channel resistance
-
-- ECC vs RSA comparison
-
+10. **Lattice-Based Cryptography**
+    - Lattice fundamentals (basis, volume)
+    - SVP / CVP problems
+    - LWE / RLWE
+    - Standards: Kyber, Dilithium
 
 ---
-Part IV: Quantum Threats & Post-Quantum Cryptography
 
-9. Quantum Risks
-
-- Shor’s algorithm
-
-- Impact on RSA/ECC
-
-- Security boundary shifts
-
-10. Lattice-Based Cryptography
-
-- Lattice fundamentals (basis, volume)
-
-- SVP / CVP problems
-
-- LWE / RLWE
-
-- Standards: Kyber, Dilithium
-
-
----
-Part V: Engineering Practice & Pitfalls
-
+### Part V: Engineering Practice & Pitfalls
 - Algebra behind RSA / DH / SM2
-
 - Subgroup optimization in ECC
-
 - Ideals and quotient groups in cryptography
-
 - Small subgroup attacks
-
 - Big integer overflow issues
-
 - Post-quantum engineering trade-offs
 
+---
+
+## 🚀 Key Features
+- 🔗 **Theory + Engineering Integration**
+  Every mathematical concept is tied to a real cryptographic use case.
+
+- 🧠 **Problem-Driven Structure**
+  Mathematics is introduced through security problems, not abstract axioms.
+
+- 🧪 **Example-Based Learning**
+  Includes concrete computations: Modular groups, AES S-box construction, ECC point operations.
+
+- 📊 **Visualization Support**
+  TikZ diagrams for: GCD geometry, Cosets, Lattice structures.
+
+- 🏭 **Industry-Oriented**
+  Covers real-world standards: TLS, SSH, SM2, Post-quantum cryptography.
 
 ---
-🚀 Key Features
 
-- 🔗 Theory + Engineering Integration
+## 🧭 Learning Paths
+1. **Classical Cryptography**
+   Congruence → Group → Primitive Root → DLP → ECC
 
-        Every mathematical concept is tied to a real cryptographic use case.
-      
+2. **Engineering Implementation**
+   Finite Field → Field Extension → ECC → SM2
 
-- 🧠 Problem-Driven Structure
- Mathematics is introduced through security problems, not abstract axioms.
-
-- 🧪 Example-Based Learning
-
-        Includes concrete computations: Modular groups, AES S-box construction, ECC point operations.
-      
-
-- 📊 Visualization Support
-
-        TikZ diagrams for: GCD geometry, Cosets, Lattice structures.
-      
-
-- 🏭 Industry-Oriented
-
-        Covers real-world standards: TLS  SSH, SM2, Post-quantum cryptography.
-      
-
+3. **Post-Quantum Cryptography**
+   Linear Algebra → Lattice → SVP/CVP → LWE/RLWE
 
 ---
-🧭 Learning Paths
 
-1. Classical Cryptography
-
-Congruence → Group → Primitive Root → DLP → ECC
-
-2. Engineering Implementation
-
-Finite Field → Field Extension → ECC → SM2
-
-3. Post-Quantum Cryptography
-
-Linear Algebra → Lattice → SVP/CVP → LWE/RLWE
-
-
----
-⚙️ Environment Requirements
-
-LaTeX Compilation
-
+## ⚙️ Environment Requirements
+### LaTeX Compilation
 - TeX Live / MiKTeX
-
 - PDFLaTeX or XeLaTeX
 
-Required Packages
-
+### Required Packages
 - beamer
-
 - tikz
-
 - amsmath, amssymb
-
 - array, tabularx
-
 - pgfplots
 
-Optional Tools
-
-Big integer computation:
-
-- GMP (C/C++)
-
-- OpenSSL BIGNUM
-
-- Pythoncryptography
-
-Post-quantum libraries:
-
-- liboqs (Open Quantum Safe)
-
+### Optional Tools
+- Big integer computation: GMP (C/C++), OpenSSL BIGNUM, Python cryptography
+- Post-quantum libraries: liboqs (Open Quantum Safe)
 
 ---
-📌 Practical Guidance
 
+## 📌 Practical Guidance
 - Always validate parameters (e.g., safe primes, curve order)
-
 - Avoid small subgroup vulnerabilities
-
 - Ensure constant-time implementations
-
 - Carefully handle big integer overflow
-
 - Balance performance vs security in PQC systems
 
-
 ---
-📎 Additional Resources
 
+## 📎 Additional Resources
 - 📕 Kindle Edition:
-https://www.amazon.com/dp/B0GVJQ7TR8
+  https://www.amazon.com/dp/B0GVJQ7TR8
 
 - 🎓 Google Scholar:
-https://scholar.google.com/citations?user=d3mvChQAAAAJ&hl=en
-
+  https://scholar.google.com/citations?user=d3mvChQAAAAJ&hl=en
 
 ---
-📢 Notes
 
+## 📢 Notes
 This project is actively evolving. Future updates will include:
-
 - Remaining chapters
-
 - More engineering case studies
-
 - Expanded post-quantum implementations
-
 - Code + math integration examples
 
-
 ---
-⭐ Contribution & Feedback
 
+## ⭐ Contribution & Feedback
 Contributions, suggestions, and discussions are welcome. Feel free to open issues or submit pull requests.
 
+---
+
+## 🔬 Methodology & Philosophy
+1. **Structure-Driven Cryptography**
+   Algebraic structures = security mechanisms
+   Hardness assumptions = structural properties
+   Algorithms = structure-preserving transformations
+
+2. **From “Proof” to “Mechanism”**
+   Focus on: Structure → Constraint → Algorithm → Security
+
+3. **Security as Geometry & Complexity**
+   Group structure → symmetry constraints
+   Finite field → computational closure
+   Lattice → geometric hardness
+
+4. **Post-Quantum Shift**
+   Classical: Number theory, DLP / Factorization
+   Post-quantum: Linear algebra / lattices, LWE / SVP
 
 ---
-🔬 Methodology & Philosophy
 
-This project follows a fundamentally different philosophy from traditional mathematics or cryptography textbooks:
-
-1. Structure-Driven Cryptography
-
-Instead of treating algebra as abstract formalism, we emphasize:
-
-- Algebraic structures = security mechanisms
-
-- Hardness assumptions = structural properties
-
-- Algorithms = structure-preserving transformations
-
-👉 Cryptography is presented as a mathematical structure engineering discipline
-
-2. From “Proof” to “Mechanism”
-
-Traditional textbooks focus on:
-
-Axioms → Theorems → Proofs
-
-This project focuses on:
-
-Structure → Constraint → Algorithm → Security
-
-Each theorem answers:
-
-What role does this play in a real cryptosystem?
-
-3. Security as Geometry & Complexity
-
-We reinterpret cryptographic hardness through:
-
-- Group structure → symmetry constraints
-
-- Finite field → computational closure
-
-- Lattice → geometric hardness
-
-- Discrete log → orbit indistinguishability
-
-👉 Bridging: Algebra → Geometry → Complexity theory
-
-4. Post-Quantum Shift
-
-We explicitly highlight the paradigm transition:
-
-Classical Cryptography
-
-Post-Quantum Cryptography
-
-Number theory
-
-Linear algebra / lattices
-
-DLP / Factorization
-
-LWE / SVP
-
-Group-based hardness
-
-Geometry-based hardness
-
-
----
-🧪 Research-Oriented Extensions
-
-This repository is not only a teaching material, but also a research entry point.
-
+## 🧪 Research-Oriented Extensions
 Potential Research Directions
-
 - Structure-aware cryptographic design
-
 - Algebraic invariants in security proofs
-
 - Lattice geometry and optimization
-
 - Efficient finite field implementations
-
 - Post-quantum protocol engineering
-
-- Cryptographic complexity gaps (e.g., Pollard-Rho vs NFS)
-
+- Cryptographic complexity gaps
 
 ---
-📊 Comparison with Traditional Textbooks
 
-Feature
-
-Traditional Algebra Book
-
-This Project
-
-Focus
-
-Axiomatic systems
-
-Cryptographic structures
-
-Motivation
-
-Pure mathematics
-
-Security problems
-
-Examples
-
-Abstract
-
-Algorithm-driven
-
-Engineering
-
-❌ Minimal
-
-✅ Strong
-
-Post-quantum
-
-❌ Rare
-
-✅ Integrated
-
-
----
-🏗️ Project Roadmap
-
-Short-Term
-
+## 🏗️ Project Roadmap
+### Short-Term
 - [ ] Complete all 10 chapters
-
 - [ ] Add full worked examples
-
 - [ ] Expand ECC & SM2 engineering details
 
-Mid-Term
-
+### Mid-Term
 - [ ] Add Python / C++ implementations
-
 - [ ] Integrate OpenSSL / GMP demos
-
 - [ ] Add lattice visualization tools
 
-Long-Term
-
+### Long-Term
 - [ ] Full post-quantum implementation suite
-
 - [ ] Interactive visualization (Jupyter + TikZ hybrid)
-
 - [ ] Integration with real-world protocols (TLS, PQC APIs)
 
-
 ---
-💡 Who This Is For
 
-🎓 Students
-
+## 💡 Who This Is For
+🎓 **Students**
 - Cryptography / cybersecurity majors
-
 - Transition from math → security
 
-🧑‍💻 Engineers
-
+🧑‍💻 **Engineers**
 - Security engineers
-
 - Backend / systems developers
-
 - Cryptographic implementation practitioners
 
-🔬 Researchers
-
+🔬 **Researchers**
 - Algebra + cryptography intersection
-
 - Post-quantum cryptography
-
 - Mathematical foundations of security
 
+---
+
+## 🧠 Core Insight
+> Cryptography is not built on mathematics.
+> Cryptography is mathematics under adversarial constraints.
 
 ---
-🧠 Core Insight
 
-
-      Cryptography is not built on mathematics.
-
-      Cryptography is mathematics under adversarial constraints.
-    
-
-
----
-⭐ If You Find This Useful
-
+## ⭐ If You Find This Useful
 - Star ⭐ the repository
-
 - Share with students or colleagues
-
 - Cite in teaching / research (if applicable)
 
-⚠️ Final Note
+---
 
+⚠️ **Final Note**
 This is not just a textbook. It is an attempt to redefine:
-
 How mathematics should be taught for cryptography.
+
+</div>
